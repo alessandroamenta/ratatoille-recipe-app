@@ -22,13 +22,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 90%;
   max-width: 500px;
   border: 1px solid #444444;
   background-color: #1E1E1E;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 2rem;
   border-radius: 5px;
+  margin-bottom: 2rem;
 }
 
 .recipe-input {
@@ -74,7 +75,7 @@
   margin-top: 2rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  width: 100%;
+  width: 90%;
   max-width: 800px;
   background-color: #1E1E1E;
   overflow-y: scroll;
@@ -98,16 +99,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2rem;
 }
-
 
 .recipe-instructions {
   margin-bottom: 2rem;
   text-align: justify;
-  height: 40vh;
+  height: auto;
   background-color: #2E2E2E;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 2rem;
+  overflow-y: scroll;
+  max-height: 40vh;
 }
 
 .recipe-ingredients li {
@@ -118,6 +121,7 @@
 
 .recipe-instructions ol {
   counter-reset: recipe-instructions-counter;
+  padding-left: 1.2em;
 }
 
 .recipe-instructions li {
@@ -125,6 +129,7 @@
   margin: 1em 0;
   line-height: 1.5;
   font-size: 1.2rem;
+  padding-left: 1.2em;
 }
 
 .recipe-instructions li::before {
@@ -184,5 +189,23 @@
 
   .recipe-card__cta > * + * {
     margin-left: 1em;
+  }
+
+  .recipe-card__servings,
+  .recipe-card__time {
+    display: flex;
+    align-items: center;
+  }
+
+  .recipe-card__servings::before {
+    content: "Servings: ";
+    font-weight: bold;
+    margin-right: 0.5em;
+  }
+
+  .recipe-card__time::before {
+    content: "Time: ";
+    font-weight: bold;
+    margin-right: 0.5em;
   }
 }
