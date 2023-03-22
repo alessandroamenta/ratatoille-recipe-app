@@ -16,7 +16,7 @@ function Recipe() {
       return;
     }
     try {
-      const response = await fetch("https://ratatoille-recipe-app-backend.vercel.app/", {
+      const response = await fetch("https://ratatoille-recipe-app-backend.vercel.app//api/recipe", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
