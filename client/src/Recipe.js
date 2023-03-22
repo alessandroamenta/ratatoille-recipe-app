@@ -16,7 +16,7 @@ function Recipe() {
       return;
     }
     try {
-      const response = await fetch("http://localhost:5000/api/recipe", {
+      const response = await fetch("http://localhost:8080/api/recipe", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -55,8 +55,8 @@ function Recipe() {
       </form>
       {recipe ? (
         <div className="recipe-result">
-          {recipe.name && (
-            <h2 className="recipe-result-title">{recipe.name}</h2>
+          {recipe.title && (
+            <h2 className="recipe-result-title">{recipe.title}</h2>
           )}
           <div className="recipe-instructions">
             <h3 className="recipe-instructions-title">Instructions:</h3>
