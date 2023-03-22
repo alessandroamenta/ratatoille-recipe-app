@@ -16,7 +16,7 @@ function Recipe() {
       return;
     }
     try {
-      const response = await fetch("https://recipe-app-px3i.onrender.com", {
+      const response = await fetch("http://localhost:8080/api/recipe", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
