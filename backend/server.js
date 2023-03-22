@@ -11,6 +11,10 @@ const port = process.env.PORT || 8080;
 app.use(cors());
 app.use(bodyParser.json());
 
+app.get('/', (req, res) => {
+  res.sendStatus(200)
+})
+
 app.post("/api/recipe", async (req, res) => {
   const { ingredients } = req.body;
   const apiKey = process.env.SPOONACULAR_API_KEY;
